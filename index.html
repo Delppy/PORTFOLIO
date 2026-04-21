@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@delppy1_ — Media Kit 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --dp: #130D35;
+  --dl: #2D1E6E;
+  --pm: #5740C4;
+  --pl: #7B62D9;
+  --pa: #C5B8F5;
+  --wh: #FFFFFF;
+  --div: rgba(255,255,255,0.1);
+  --muted: rgba(255,255,255,0.45);
+  --semi: rgba(255,255,255,0.65);
+  --pad: 20px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #0C0824;
+  color: var(--wh);
+  min-height: 100vh;
+}
+
+.kit {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--dp);
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--dl);
+  padding: 32px var(--pad) 32px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -100px;
+  width: 360px; height: 360px;
+  border-radius: 50%;
+  background: var(--pm);
+  opacity: .18;
+  pointer-events: none;
+}
+.hero-inner { position: relative; z-index: 1; }
+
+.hero-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.kit-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--pa);
+  border: 1px solid rgba(197,184,245,.3);
+  padding: 6px 14px;
+  border-radius: 100px;
+  width: fit-content;
+}
+.award-tag {
+  font-size: 11px;
+  color: rgba(197,184,245,.7);
+  line-height: 1.5;
+}
+.award-tag strong {
+  display: block;
+  font-weight: 600;
+  color: var(--pa);
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.hero-handle {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: .9;
+  color: var(--wh);
+  letter-spacing: -2px;
+  margin-bottom: 12px;
+}
+.hero-handle em { color: var(--pa); font-style: normal; }
+
+.hero-sub {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--pa);
+  margin-bottom: 10px;
+}
+.hero-tagline {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--semi);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--div);
+  padding-top: 24px;
+  gap: 20px 0;
+}
+.stat {}
+.stat:nth-child(odd) {
+  border-right: 1px solid var(--div);
+  padding-right: 16px;
+}
+.stat:nth-child(even) {
+  padding-left: 16px;
+}
+.stat-val {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--wh);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.stat-lbl {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+/* ── SECTIONS ── */
+section {
+  padding: 36px var(--pad);
+  border-top: 1px solid var(--div);
+}
+.eyebrow {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--pl);
+  margin-bottom: 6px;
+}
+.sec-title {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--wh);
+  letter-spacing: -.3px;
+  margin-bottom: 20px;
+}
+
+/* ── CARDS (shared) ── */
+.card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 20px 18px;
+}
+
+/* ── PLATFORM CARDS ── */
+.platforms {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.plat-name {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--pa);
+  margin-bottom: 6px;
+}
+.plat-followers {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--wh);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.plat-metrics { display: flex; flex-direction: column; gap: 6px; }
+.plat-metric { display: flex; justify-content: space-between; font-size: 13px; }
+.plat-metric-lbl { color: var(--muted); }
+.plat-metric-val { color: rgba(255,255,255,.85); font-weight: 500; }
+.plat-badge {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #A3F0C4;
+  background: rgba(163,240,196,.12);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+/* ── AUDIENCE ── */
+.audience-grid { display: flex; flex-direction: column; gap: 12px; }
+.aud-title {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--pa);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.gender-bar {
+  display: flex;
+  height: 6px;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.gender-m { background: var(--pl); }
+.gender-f { background: rgba(255,255,255,.2); }
+.gender-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 16px;
+  color: var(--semi);
+}
+.gender-labels strong { font-weight: 600; color: var(--wh); }
+.age-rows { display: flex; flex-direction: column; gap: 8px; }
+.age-row { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+.age-lbl { color: var(--muted); min-width: 44px; }
+.age-track { flex: 1; height: 4px; background: rgba(255,255,255,.1); border-radius: 100px; overflow: hidden; }
+.age-fill { height: 100%; background: var(--pl); border-radius: 100px; }
+.age-pct { color: rgba(255,255,255,.75); font-weight: 500; min-width: 36px; text-align: right; }
+
+/* ── RATES ── */
+.rates-list { display: flex; flex-direction: column; gap: 12px; }
+.rate-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 14px; padding: 20px 18px; }
+.rate-card.feat { background: linear-gradient(135deg,#3A28A0,#5740C4); border-color: var(--pl); }
+.rate-card.hero-card { background: linear-gradient(135deg,#2A1E6A,#3D2D8C); border-color: rgba(197,184,245,.3); }
+.rate-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+.rate-type {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--pa);
+}
+.rate-price {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--wh);
+  text-align: right;
+}
+.rate-price sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+  vertical-align: baseline;
+  margin-left: 2px;
+}
+.rate-name {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--wh);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.rate-note {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.addons-box {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 14px;
+  padding: 20px 18px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.addons-box strong {
+  display: block;
+  color: var(--pa);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* ── BRANDS ── */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.brand-chip {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+  padding: 20px 14px;
+  text-align: center;
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255,255,255,.75);
+}
+
+/* ── FOOTER ── */
+.footer {
+  padding: 32px var(--pad);
+  border-top: 1px solid var(--div);
+  background: var(--dl);
+}
+.footer-handle {
+  font-family: 'Funnel Display', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--wh);
+  letter-spacing: -.4px;
+  margin-bottom: 4px;
+}
+.footer-email {
+  font-size: 13px;
+  color: var(--pa);
+  margin-bottom: 4px;
+}
+.footer-sub { font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+.pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.pill {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 100px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,.65);
+}
+
+/* ── TABLET & DESKTOP ── */
+@media (min-width: 600px) {
+  :root { --pad: 40px; }
+  .hero-top { flex-direction: row; justify-content: space-between; align-items: flex-start; }
+  .award-tag { text-align: right; max-width: 220px; }
+  .hero-handle { font-size: 68px; }
+  .hero-stats { grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .stat:nth-child(odd) { border-right: none; padding-right: 0; }
+  .stat:nth-child(even) { padding-left: 0; }
+  .stat { border-right: 1px solid var(--div); padding-right: 20px; margin-right: 20px; }
+  .stat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+  .stat-val { font-size: 32px; }
+  .platforms { display: grid; grid-template-columns: repeat(2, 1fr); }
+  .audience-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  .brands-grid { grid-template-columns: repeat(4, 1fr); }
+  .footer { display: flex; justify-content: space-between; align-items: center; }
+  .footer-sub { margin-bottom: 0; }
+  .pills { justify-content: flex-end; }
+}
+
+@media (min-width: 860px) {
+  :root { --pad: 64px; }
+  .kit { border-radius: 24px; margin: 40px auto 60px; border: 1px solid rgba(255,255,255,.07); }
+  body { background: #0C0824; }
+  .hero { padding: 64px var(--pad) 52px; }
+  .hero-handle { font-size: 80px; letter-spacing: -3px; }
+  .hero-top { margin-bottom: 28px; }
+  .hero-sub { font-size: 20px; }
+  .hero-tagline { font-size: 15px; margin-bottom: 48px; }
+  .hero-stats { padding-top: 36px; }
+  .stat-val { font-size: 34px; }
+  section { padding: 52px var(--pad); }
+  .sec-title { font-size: 30px; margin-bottom: 32px; }
+  .platforms { grid-template-columns: repeat(2, 1fr); }
+  .rates-list { display: grid; grid-template-columns: repeat(2, 1fr); }
+  .rates-list .full { grid-column: 1 / -1; }
+  .footer-sub { margin-bottom: 0; }
+}
+</style>
+</head>
+<body>
+<div class="kit">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-top">
+        <div class="kit-badge">Media Kit · 2026</div>
+        <div class="award-tag">
+          <strong>🏆 Tech Content Creator of the Year</strong>
+          Creators Ghana &amp; Eminent Awards
+        </div>
+      </div>
+      <h1 class="hero-handle">@<em>delppy1_</em></h1>
+      <p class="hero-sub">Award-Winning Tech &amp; AI Creator</p>
+      <p class="hero-tagline">Helping AI, software, smartphone, and digital brands reach engaged African audiences through trusted short-form content, product explainers, and creator-led campaigns.</p>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-val">627.5K+</div><div class="stat-lbl">Total Followers</div></div>
+        <div class="stat"><div class="stat-val">7.4%</div><div class="stat-lbl">IG Engagement</div></div>
+        <div class="stat"><div class="stat-val">2.1M</div><div class="stat-lbl">Monthly Reach</div></div>
+        <div class="stat"><div class="stat-val">77%</div><div class="stat-lbl">Male Audience</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLATFORMS -->
+  <section>
+    <div class="eyebrow">Performance</div>
+    <h2 class="sec-title">Platform Highlights</h2>
+    <div class="platforms">
+      <div class="card">
+        <div class="plat-name">Instagram</div>
+        <div class="plat-followers">234.0K</div>
+        <div class="plat-metrics">
+          <div class="plat-metric"><span class="plat-metric-lbl">Engagement rate</span><span class="plat-metric-val">7.4%</span></div>
+          <div class="plat-metric"><span class="plat-metric-lbl">30-day reach</span><span class="plat-metric-val">2.1M</span></div>
+          <div class="plat-metric"><span class="plat-metric-lbl">Avg Reels views</span><span class="plat-metric-val">113.8K</span></div>
+          <div class="plat-metric"><span class="plat-metric-lbl">Avg likes</span><span class="plat-metric-val">4,700</span></div>
+        </div>
+        <div class="plat-badge">Top 25% engagement</div>
+      </div>
+      <div class="card">
+        <div class="plat-name">TikTok · Smartphones &amp; Accessories</div>
+        <div class="plat-followers">287.5K</div>
+        <div class="plat-metrics">
+          <div class="plat-metric"><span class="plat-metric-lbl">Niche</span><span class="plat-metric-val">Reviews · Tips &amp; Tricks</span></div>
+          <div class="plat-metric"><span class="plat-metric-lbl">Engagement rate</span><span class="plat-metric-val">11.4%</span></div>
+          <div class="plat-metric"><span class="plat-metric-lbl">Avg views</span><span class="plat-metric-val">12,400</span></div>
+          <div class="plat-metric"><span class="plat-metric-lbl">Avg likes</span><span class="plat-metric-val">1,500</span></div>
+        </div>
+        <div class="plat-badge">Top 25% engagement</div>
+      </div>
+      <div class="card">
+        <div class="plat-name">TikTok · AI Content</div>
+        <div class="plat-followers">21.9K</div>
+        <div class="plat-metrics">
+          <div class="plat-metric"><span class="plat-metric-lbl">Niche</span><span class="plat-metric-val">AI Tools &amp; Technology</span></div>
+          <div class="plat-metric"><span class="plat-metric-lbl">Engagement rate</span><span class="plat-metric-val">11.8%</span></div>
+          <div class="plat-metric"><span class="plat-metric-lbl">Avg views</span><span class="plat-metric-val">18,100</span></div>
+          <div class="plat-metric"><span class="plat-metric-lbl">Avg likes</span><span class="plat-metric-val">1,400</span></div>
+        </div>
+        <div class="plat-badge">Top 25% engagement</div>
+      </div>
+      <div class="card">
+        <div class="plat-name">YouTube</div>
+        <div class="plat-followers">16.7K</div>
+        <div class="plat-metrics">
+          <div class="plat-metric"><span class="plat-metric-lbl">Content engagement</span><span class="plat-metric-val">4.8%</span></div>
+          <div class="plat-metric"><span class="plat-metric-lbl">Avg video views</span><span class="plat-metric-val">2,600</span></div>
+          <div class="plat-metric"><span class="plat-metric-lbl">Avg Shorts views</span><span class="plat-metric-val">1,400</span></div>
+          <div class="plat-metric"><span class="plat-metric-lbl">Avg watch time</span><span class="plat-metric-val">57 sec</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIENCE -->
+  <section>
+    <div class="eyebrow">Audience</div>
+    <h2 class="sec-title">Who's Watching</h2>
+    <div class="audience-grid">
+      <div class="card">
+        <div class="aud-title">Instagram · Ghana · UK · USA · Nigeria</div>
+        <div class="gender-bar"><div class="gender-m" style="width:77.4%"></div><div class="gender-f" style="width:22.6%"></div></div>
+        <div class="gender-labels"><span><strong>77.4%</strong> Male</span><span><strong>22.6%</strong> Female</span></div>
+        <div class="age-rows">
+          <div class="age-row"><span class="age-lbl">25–34</span><div class="age-track"><div class="age-fill" style="width:43%"></div></div><span class="age-pct">43%</span></div>
+          <div class="age-row"><span class="age-lbl">35–44</span><div class="age-track"><div class="age-fill" style="width:26.3%"></div></div><span class="age-pct">26.3%</span></div>
+          <div class="age-row"><span class="age-lbl">18–24</span><div class="age-track"><div class="age-fill" style="width:13.2%"></div></div><span class="age-pct">13.2%</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="aud-title">TikTok · Ghana · UK · USA · Nigeria</div>
+        <div class="gender-bar"><div class="gender-m" style="width:77%"></div><div class="gender-f" style="width:23%"></div></div>
+        <div class="gender-labels"><span><strong>77%</strong> Male</span><span><strong>23%</strong> Female</span></div>
+        <div class="age-rows">
+          <div class="age-row"><span class="age-lbl">25–34</span><div class="age-track"><div class="age-fill" style="width:48.5%"></div></div><span class="age-pct">48.5%</span></div>
+          <div class="age-row"><span class="age-lbl">18–24</span><div class="age-track"><div class="age-fill" style="width:35.8%"></div></div><span class="age-pct">35.8%</span></div>
+          <div class="age-row"><span class="age-lbl">35–44</span><div class="age-track"><div class="age-fill" style="width:12%"></div></div><span class="age-pct">12%</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RATES -->
+  <section>
+    <div class="eyebrow">Investment</div>
+    <h2 class="sec-title">Rates &amp; Packages</h2>
+    <div class="rates-list">
+      <div class="rate-card">
+        <div class="rate-top"><div class="rate-type">Instagram</div><div class="rate-price">GH₵1,200<sub>/ set</sub></div></div>
+        <div class="rate-name">Story Set</div>
+        <div class="rate-note">3–5 frames · link sticker / CTA support</div>
+      </div>
+      <div class="rate-card feat">
+        <div class="rate-top"><div class="rate-type">Instagram</div><div class="rate-price">GH₵5,000<sub>/ reel</sub></div></div>
+        <div class="rate-name">Instagram Reel</div>
+        <div class="rate-note">Concept · filming · editing · posting</div>
+      </div>
+      <div class="rate-card feat">
+        <div class="rate-top"><div class="rate-type">TikTok</div><div class="rate-price">GH₵5,000<sub>/ video</sub></div></div>
+        <div class="rate-name">TikTok Video</div>
+        <div class="rate-note">Concept · filming · editing · posting</div>
+      </div>
+      <div class="rate-card">
+        <div class="rate-top"><div class="rate-type">YouTube</div><div class="rate-price">GH₵2,500<sub>/ video</sub></div></div>
+        <div class="rate-name">YouTube Integration</div>
+        <div class="rate-note">Brand mention or integration in long-form video</div>
+      </div>
+      <div class="rate-card">
+        <div class="rate-top"><div class="rate-type">YouTube</div><div class="rate-price">GH₵4,500<sub>/ video</sub></div></div>
+        <div class="rate-name">Dedicated YouTube Video</div>
+        <div class="rate-note">Full brand-focused long-form feature</div>
+      </div>
+      <div class="rate-card">
+        <div class="rate-top"><div class="rate-type">Bundle</div><div class="rate-price">GH₵6,000<sub>/ pkg</sub></div></div>
+        <div class="rate-name">Reel + Story Set</div>
+        <div class="rate-note">1 Instagram Reel + 1 Story set</div>
+      </div>
+      <div class="rate-card hero-card full">
+        <div class="rate-top"><div class="rate-type">Multi-Platform</div><div class="rate-price">GH₵8,500<sub>/ campaign</sub></div></div>
+        <div class="rate-name">Cross-Platform Package</div>
+        <div class="rate-note">Full multi-platform campaign — broadest reach across all channels</div>
+      </div>
+      <div class="addons-box full">
+        <strong>Add-Ons Available</strong>
+        Usage rights · Exclusivity · Whitelisting · Raw footage · Extra revisions · Rush turnaround · Multi-month ambassador packages — all at custom rates. Rates vary based on campaign scope, deliverables, and turnaround time.
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section>
+    <div class="eyebrow">Track Record</div>
+    <h2 class="sec-title">Brands I Have Worked With</h2>
+    <div class="brands-grid">
+      <div class="brand-chip">Google</div>
+      <div class="brand-chip">Meta AI</div>
+      <div class="brand-chip">Cert AI</div>
+      <div class="brand-chip">Copy.ai</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>
+      <div class="footer-handle">@delppy1_</div>
+      <div class="footer-email">business@delppy.com</div>
+      <div class="footer-sub">Open for partnerships, campaigns &amp; ambassadorships</div>
+    </div>
+    <div class="pills">
+      <div class="pill">Instagram · 234K</div>
+      <div class="pill">TikTok · 309K</div>
+      <div class="pill">YouTube · 16.7K</div>
+      <div class="pill">Facebook · 64.9K</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
